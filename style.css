@@ -1,0 +1,72 @@
+body {
+    background-color: #dcffdd;
+}
+
+
+.container-sm{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    
+    padding: 40px;
+    
+}
+
+.btn{
+    max-width: 100px;
+}
+
+input{
+    max-width: 567px;
+}
+
+.btn-secondary{
+    margin-top: 30px;
+}
+
+.list-group{
+    max-width: 568px;
+}
+.list-group-item{
+    position: relative;
+    cursor: pointer;
+    font-size: 18px;
+
+    padding-left: 44px;
+}
+.list-group-item::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;    
+    background-image: url(img/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 8px;
+    left: 8px;
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(img/checked.png);
+    
+}
+
+.task__hide{
+    position: absolute;
+    right: 16px;
+    cursor: pointer;
+
+}
+
+.visibility{
+    display: none;
+}
+
+.checked{
+    text-decoration-line: line-through;
+}
