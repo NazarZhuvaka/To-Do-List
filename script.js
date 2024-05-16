@@ -55,7 +55,7 @@ headerBtn.addEventListener('mouseover' , function (e) {
 })
 
 headerBtn.addEventListener('mouseout', () => {
-    aside.classList.remove('visibility') // Повертаємо початковий колір фону
+    aside.classList.remove('visibility') 
 });
 
 
