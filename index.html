@@ -11,29 +11,54 @@
       crossorigin="anonymous"
     />
 
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="style.css" />
 
     <title>To-do-list</title>
   </head>
   <body>
+    <div class="wrapper">
+      <aside class="aside">
+        <div class="aside__container">
 
-    <h1>To Do List</h1>
 
-    <div class="container-sm">
+          <div class="icons__title">
+            <span class="material-icons menu-icon">menu</span> 
+            <p class="menu-icon__text">Menu</p>
+          </div>
+          <div class="icons__title">
+            <span class="material-icons ">home</span> 
+            <p class="menu-icon__text">home</p>
+          </div>
+          <div class="icons__title">
+            <span class="material-icons ">star</span> 
+            <p class="menu-icon__text">star</p>
+          </div>
 
-        <ul class="list-group">
-            <!-- <li class="list-group-item">
-              <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
-              <label class="form-check-label" for="firstCheckbox">First checkbox</label>
+          <!-- <span class="material-icons"> home </span>2 -->
+        </div>
+      </aside>
 
-              Task 1
-            </li> -->
-        </ul>
-
-        <input type="text" id="inputPassword5" class="form-control task-input" aria-describedby="passwordHelpBlock" placeholder="Enter your new task">
-
+      <div class="container-sm">
+        <ul class="list-group"></ul>
+        <input
+          type="text"
+          id="inputPassword5"
+          class="form-control task-input"
+          aria-describedby="passwordHelpBlock"
+          placeholder="Enter your new task"
+        />
         <button type="button" class="btn btn-secondary">Add Task</button>
-
+      </div>
     </div>
 
     <script src="./script.js"></script>

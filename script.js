@@ -33,3 +33,16 @@ taskGroup.addEventListener('click', function(e) {
         e.target.parentElement.remove();
     }
 }, false);
+
+
+const menuBtn = document.querySelector('.menu-icon')
+const menuText = document.querySelectorAll('.menu-icon__text')
+
+menuBtn.addEventListener('click' , function () {
+    for (item of menuText) {
+        item.classList.toggle('visibility')
+    }
+
+})
+
+

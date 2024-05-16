@@ -2,6 +2,11 @@ body {
     background-color: #dcffdd;
 }
 
+.wrapper{
+    display: grid;
+    grid-template-columns: 0.5fr 4fr;
+}
+
 
 .container-sm{
     display: flex;
@@ -69,4 +74,31 @@ ul li.checked::before{
 
 .checked{
     text-decoration-line: line-through;
+}
+
+/* Menu */
+
+.icons__title{
+    display: flex;
+    gap: 16px;
+}
+
+.menu-icon{
+    cursor: pointer;
+}
+
+
+/* aside CSS */
+
+.aside{
+    display: flex;
+    height: 100vh;
+}
+
+.aside__container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: white;
+    padding: 15px;
 }
