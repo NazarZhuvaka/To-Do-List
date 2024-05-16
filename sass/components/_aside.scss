@@ -1,17 +1,26 @@
 .aside {
     position: absolute;
-    background: blue;
-    // height: 100%;
+    // background: blue;
+
+
+    transform: translate(-120%, -30%);
+	transition: 0.3s;
+
+    width: 200px;
+    height: 100vh;
 
 
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 50px;
 
     top: 50%;
     left: 0;
 
     &__container {
+        background-color: red;
+        max-width: 100px;
     }
 }
 .icons {

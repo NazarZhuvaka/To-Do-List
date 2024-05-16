@@ -35,27 +35,30 @@ taskGroup.addEventListener('click', function(e) {
 }, false);
 
 
-// const menuBtn = document.querySelector('.menu-icon')
-// const menuText = document.querySelectorAll('.menu-icon__text')
+const headerBtn = document.querySelector('.header__menu');
+const aside = document.querySelector('.aside');
 
-// menuBtn.addEventListener('click' , function () {
-//     for (item of menuText) {
-//         item.classList.toggle('visibility')
-//     }
+function showAside() {
+    aside.classList.add('visibility');
+}
 
-// })
+function hideAside() {
+    aside.classList.remove('visibility');
+}
 
-
-
-const headerBtn = document.querySelector('.header__menu') 
-const aside = document.querySelector('.aside')
-
-headerBtn.addEventListener('mouseover' , function (e) {
-    aside.classList.add('visibility')
-})
+headerBtn.addEventListener('mouseover', showAside);
 
 headerBtn.addEventListener('mouseout', () => {
-    aside.classList.remove('visibility') 
+        if (!aside.matches(':hover') && !headerBtn.matches(':hover')) {
+            hideAside();
+        }
 });
 
+aside.addEventListener('mouseover', showAside);
+
+aside.addEventListener('mouseout', () => {
+        if (!aside.matches(':hover') && !headerBtn.matches(':hover')) {
+            hideAside();
+        }
+});
 

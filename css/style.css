@@ -49,7 +49,8 @@ html._overflow body {
 }
 
 .visibility {
-  display: none !important;
+  transform: translate(0%, -30%) !important;
+  transition: 0.3s;
 }
 
 *,
@@ -242,10 +243,18 @@ p {
 
 .aside {
   position: absolute;
-  background: blue;
+  transform: translate(-120%, -30%);
+  transition: 0.3s;
+  width: 200px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 50px;
   top: 50%;
   left: 0;
+}
+.aside__container {
+  background-color: red;
+  max-width: 100px;
 }/*# sourceMappingURL=style.css.map */

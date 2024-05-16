@@ -53,7 +53,9 @@ html._overflow {
 }
 
 .visibility{
-    display: none !important;
+	transform: translate(0%, -30%) !important;
+	transition: 0.3s;
+
 }
 
 // .title {
