@@ -216,7 +216,7 @@ p {
 .tasks {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: minmax(100px, max-content);
+  grid-template-rows: minmax(170px, max-content);
 }
 .tasks__container {
   grid-row-start: 2;
@@ -224,7 +224,9 @@ p {
 }
 .tasks__title {
   grid-column-start: 2;
-  border: 1px solid black;
+  align-self: flex-end;
+  margin-bottom: 20px;
+  border: none;
   background: none;
   font-size: 2.7em;
   font-weight: 600;
