@@ -11,6 +11,12 @@ html._overflow {
 	}
 }
 
+.wrapper{
+	position: relative;
+
+	
+}
+
 .my_container {
 	max-width: calc(1920px + 16px);
 	padding: 0 8px;
@@ -44,6 +50,10 @@ html._overflow {
 			background: darken($c-primary, 5%);
 		}
 	}
+}
+
+.visibility{
+    display: none !important;
 }
 
 // .title {

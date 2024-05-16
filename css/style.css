@@ -21,6 +21,10 @@ html._overflow body {
   overflow: hidden;
 }
 
+.wrapper {
+  position: relative;
+}
+
 .my_container {
   max-width: 1936px;
   padding: 0 8px;
@@ -42,6 +46,10 @@ html._overflow body {
 }
 .btn_primary:hover {
   background: #d48902;
+}
+
+.visibility {
+  display: none !important;
 }
 
 *,
@@ -230,4 +238,14 @@ p {
   background: none;
   font-size: 2.7em;
   font-weight: 600;
+}
+
+.aside {
+  position: absolute;
+  background: blue;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  top: 50%;
+  left: 0;
 }/*# sourceMappingURL=style.css.map */

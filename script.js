@@ -35,14 +35,34 @@ taskGroup.addEventListener('click', function(e) {
 }, false);
 
 
-const menuBtn = document.querySelector('.menu-icon')
-const menuText = document.querySelectorAll('.menu-icon__text')
+// const menuBtn = document.querySelector('.menu-icon')
+// const menuText = document.querySelectorAll('.menu-icon__text')
 
-menuBtn.addEventListener('click' , function () {
-    for (item of menuText) {
-        item.classList.toggle('visibility')
-    }
+// menuBtn.addEventListener('click' , function () {
+//     for (item of menuText) {
+//         item.classList.toggle('visibility')
+//     }
+
+// })
+
+
+
+const headerBtn = document.querySelector('.header__menu') 
+const aside = document.querySelector('.aside')
+
+headerBtn.addEventListener('mouseover' , function (e) {
+    aside.classList.add('visibility')
+    // aside.classList.remove('visibility')
+    // if (e.target.className = 'visibility') {
+    //     console.log('class ADDEd')
+    // } else {
+    //     aside.classList.remove('visibility')
+    // }
 
 })
+
+headerBtn.addEventListener('mouseout', () => {
+    aside.classList.remove('visibility') // Повертаємо початковий колір фону
+});
 
 
