@@ -21,6 +21,11 @@ html._overflow body {
   overflow: hidden;
 }
 
+.my_container {
+  width: 100%;
+  margin-inline: auto;
+}
+
 .btn {
   display: inline-block;
   cursor: pointer;

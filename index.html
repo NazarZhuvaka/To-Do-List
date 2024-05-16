@@ -27,40 +27,68 @@
   </head>
   <body>
 
-    <header class="header">
-      <div class="header__menu">
-        <span class="material-icons header__menu-icon">menu</span> 
-        <p class="header__menu-text">To do tasks</p>
-      </div>
-      <div class="header__buttons">
-          <!-- Дата вxоду -->
-          <p class="header__buttons-text">Edired Mar 13</p>
-
-          <!-- hover drop-downmenu , де вказати дату вxоду і дату реєстрації -->
-          <!--  -->
-
-          <!-- hover efect drop-menu -->
-          <p class="header__buttons-share">Share</p>
-
-          <span class="material-icons">
-            chat
-          </span>
-
-          <span class="material-icons">
-            schedule
-          </span>
-          <span class="material-icons">
-            star
-          </span>
-
-          <span class="material-icons">
-            more_horiz
-          </span>
-          
-      </div>
-    </header>
-
     <div class="wrapper">
+      <div class="my_container">
+
+        <header class="header">
+          <div class="header__menu">
+            <span class="material-icons header__menu-icon">menu</span> 
+            <p class="header__menu-text">To do tasks</p>
+          </div>
+          <div class="header__buttons">
+              <!-- Дата вxоду -->
+              <p class="header__buttons-text">Edired Mar 13</p>
+    
+              <!-- hover drop-downmenu , де вказати дату вxоду і дату реєстрації -->
+              <!--  -->
+    
+              <!-- hover efect drop-menu -->
+              <p class="header__buttons-share">Share</p>
+    
+              <span class="material-icons">
+                chat
+              </span>
+    
+              <span class="material-icons">
+                schedule
+              </span>
+              <span class="material-icons">
+                star
+              </span>
+    
+              <span class="material-icons">
+                more_horiz
+              </span>
+              
+          </div>
+        </header>
+
+
+        <section class="tasks">
+          <div class="tasks__container">
+            <input class="" type="text" placeholder="To do tasks">  
+            <ul class="list-group">
+            </ul>
+          </div>
+        </section>
+  
+          
+          <input
+            type="text"
+            id="inputPassword5"
+            class="form-control task-input"
+            aria-describedby="passwordHelpBlock"
+            placeholder="Enter your new task"
+          />
+          <button type="button" class="btn btn-secondary">Add Task</button>
+
+
+
+      </div>
+    </div>
+
+    
+
 
       <!-- <aside class="aside">
         <div class="aside__container">
@@ -83,26 +111,8 @@
         </div>
       </aside> -->
 
-      <div class="container-sm">
-        <ul class="list-group">
-          <!-- <li class="list-group-item first-item">
+      
 
-            <input class="first-item" type="text" placeholder="Write here your plan on day">
-          </li> -->
-          <li class="list-group-item">
-            First Task
-          </li>
-        </ul>
-        <input
-          type="text"
-          id="inputPassword5"
-          class="form-control task-input"
-          aria-describedby="passwordHelpBlock"
-          placeholder="Enter your new task"
-        />
-        <button type="button" class="btn btn-secondary">Add Task</button>
-      </div>
-    </div>
 
     <script src="./script.js"></script>
   </body>
