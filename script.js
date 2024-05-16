@@ -52,13 +52,6 @@ const aside = document.querySelector('.aside')
 
 headerBtn.addEventListener('mouseover' , function (e) {
     aside.classList.add('visibility')
-    // aside.classList.remove('visibility')
-    // if (e.target.className = 'visibility') {
-    //     console.log('class ADDEd')
-    // } else {
-    //     aside.classList.remove('visibility')
-    // }
-
 })
 
 headerBtn.addEventListener('mouseout', () => {
