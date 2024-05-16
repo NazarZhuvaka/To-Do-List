@@ -21,13 +21,48 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
 
     <title>To-do-list</title>
   </head>
   <body>
+
+    <header class="header">
+      <div class="header__menu">
+        <span class="material-icons header__menu-icon">menu</span> 
+        <p class="header__menu-text">To do tasks</p>
+      </div>
+      <div class="header__buttons">
+          <!-- Дата вxоду -->
+          <p class="header__buttons-text">Edired Mar 13</p>
+
+          <!-- hover drop-downmenu , де вказати дату вxоду і дату реєстрації -->
+          <!--  -->
+
+          <!-- hover efect drop-menu -->
+          <p class="header__buttons-share">Share</p>
+
+          <span class="material-icons">
+            chat
+          </span>
+
+          <span class="material-icons">
+            schedule
+          </span>
+          <span class="material-icons">
+            star
+          </span>
+
+          <span class="material-icons">
+            more_horiz
+          </span>
+          
+      </div>
+    </header>
+
     <div class="wrapper">
-      <aside class="aside">
+
+      <!-- <aside class="aside">
         <div class="aside__container">
 
 
@@ -37,19 +72,27 @@
           </div>
           <div class="icons__title">
             <span class="material-icons ">home</span> 
-            <p class="menu-icon__text">home</p>
+            <p class="menu-icon__text">Home</p>
           </div>
           <div class="icons__title">
             <span class="material-icons ">star</span> 
-            <p class="menu-icon__text">star</p>
+            <p class="menu-icon__text">Star</p>
           </div>
 
-          <!-- <span class="material-icons"> home </span>2 -->
+          <span class="material-icons"> home </span>2
         </div>
-      </aside>
+      </aside> -->
 
       <div class="container-sm">
-        <ul class="list-group"></ul>
+        <ul class="list-group">
+          <!-- <li class="list-group-item first-item">
+
+            <input class="first-item" type="text" placeholder="Write here your plan on day">
+          </li> -->
+          <li class="list-group-item">
+            First Task
+          </li>
+        </ul>
         <input
           type="text"
           id="inputPassword5"

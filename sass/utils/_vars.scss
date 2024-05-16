@@ -1,0 +1,23 @@
+// breakpoints
+$desktop-small: 1200px;
+$tablet: 992px;
+$tablet-small: 768px;
+$mobile: 576px;
+$mobile-small: 380px;
+
+$c-primary: #ED9902;
+
+:root {
+	--ff: 'Rubik', sans-serif;
+	--transition: .2s all ease-in-out;
+
+	--c-primary: #ED9902;
+	--c-white: #fff;
+	--c-dark1: #21201E;
+	--c-dark2: #2D2B29;
+	--c-body: #dcffdd;
+
+
+	--font-h2-reg: 500 20px/45px var(--ff);
+}
+
