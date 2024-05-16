@@ -1,9 +1,16 @@
 .tasks {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: minmax(100px, max-content);
 
     &__container {
+
+        grid-row-start: 2;
+    grid-column-start: 2;
     }
 
     &__title{
+        grid-column-start: 2;
         border: 1px solid black;
         background: none;
         font-size: 2.7em;
