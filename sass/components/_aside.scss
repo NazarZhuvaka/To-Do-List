@@ -47,40 +47,30 @@
     &__tools {
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: 4px;
         margin-top: 12px;
     }
 
-    &__tools-icons {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
+    
 
     &__tasks{
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: 4px;
         margin-top: 24px;
-    }
-
-    &__tasks-item {
-        display: flex;
-        align-items: center;
-        gap: 8px;
     }
 
     &__secondaty-tools {
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: 4px;
         margin-top: 24px;
     }
 
     &__seck-item {
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 4px;
         
     }
 }

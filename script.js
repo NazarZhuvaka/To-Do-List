@@ -4,26 +4,6 @@ const taskInput = document.querySelector('.task-input')
 const taskGroup = document.querySelector('.list-group')
 
 
-// addtaskBtn.addEventListener('click' , function(){
-//     if (taskInput.value === '') {
-//         alert('You must write something!')
-//     } else {
-//         let newTask = document.createElement('li')
-//         newTask.className = 'list-group-item'
-//         newTask.innerHTML = taskInput.value;
-        
-//         taskGroup.appendChild(newTask);
-
-//         let closeIcon = document.createElement('span')
-//         closeIcon.innerHTML = "\u00d7";
-//         closeIcon.className = 'task__hide'
-//         newTask.appendChild(closeIcon)
-
-//     }
-
-//     taskInput.value = "";
-
-// })
 
 // taskGroup.addEventListener('click', function(e) {
 //     if (e.target.tagName === 'DIV') {
@@ -81,54 +61,24 @@ aside.addEventListener('mouseout', () => {
 });
 
 
+const hoverItem = document.querySelectorAll('.hover-item')
 
-// document.addEventListener('DOMContentLoaded', () => {
-//     const container = document.getElementById('container');
-//     const firstDiv = document.querySelector('.list-group-item');
+for ( item of hoverItem) {
+     item.style.padding = '2px 6px'
 
-//     firstDiv.addEventListener('keydown', handleKeydown);
+    item.addEventListener("mouseover",function() {
+        this.style.background = 'rgba(255, 255, 255, 0.055)'
+        this.style.borderRadius = '4px'
+        this.style.transition = '0.3s'
+        this.style.cursor = 'pointer'
+    })
 
-//     function handleKeydown(event) {
-//         if (event.key === 'Enter') {
-//             event.preventDefault(); 
-//             createNewEditableDiv(this);
-//         } else if (event.key === 'Backspace' && this.textContent === '') {
-//             event.preventDefault(); 
-//             deleteCurrentDiv(this);
-//         }
-//     }
+    item.addEventListener("mouseout",function() {
+        this.style.background = 'none'
+    })
+}
 
-//     function createNewEditableDiv(currentDiv) {
-//         const newDiv = document.createElement('div');
-//         newDiv.classList.add('list-group-item');
-//         newDiv.setAttribute('contenteditable', 'true');
-//         newDiv.addEventListener('keydown', handleKeydown);
 
-//         container.insertBefore(newDiv, currentDiv.nextSibling);
-//         newDiv.focus();
-//     }
-
-//     function deleteCurrentDiv(currentDiv) {
-//         const previousDiv = currentDiv.previousElementSibling;
-
-//         if (previousDiv) {
-//             currentDiv.remove();
-//             focusAtEnd(previousDiv);
-//         } else {
-//             currentDiv.textContent = ''; 
-//         }
-//     }
-
-//     function focusAtEnd(element) {
-//         const range = document.createRange();
-//         const selection = window.getSelection();
-//         range.selectNodeContents(element);
-//         range.collapse(false); 
-//         selection.removeAllRanges();
-//         selection.addRange(range);
-//         element.focus();
-//     }
-// });
 
 
 document.addEventListener('DOMContentLoaded', () => {

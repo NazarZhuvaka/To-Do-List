@@ -333,35 +333,25 @@ p {
 .aside__tools {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
   margin-top: 12px;
-}
-.aside__tools-icons {
-  display: flex;
-  align-items: center;
-  gap: 8px;
 }
 .aside__tasks {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
   margin-top: 24px;
-}
-.aside__tasks-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
 }
 .aside__secondaty-tools {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
   margin-top: 24px;
 }
 .aside__seck-item {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
 }
 
 .create-new-page {
