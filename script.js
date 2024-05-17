@@ -62,3 +62,30 @@ aside.addEventListener('mouseout', () => {
         }
 });
 
+
+//
+
+document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('container');
+
+    const firstDiv = document.querySelector('.list-group-item');
+    firstDiv.addEventListener('keydown', handleKeydown);
+
+    function handleKeydown(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault(); 
+            createNewEditableDiv(this);
+        }
+    }
+
+    function createNewEditableDiv(currentDiv) {
+        const newDiv = document.createElement('div');
+        newDiv.classList.add('list-group-item');
+        newDiv.setAttribute('contenteditable', 'true');
+        newDiv.addEventListener('keydown', handleKeydown);
+
+        container.insertBefore(newDiv, currentDiv.nextSibling);
+        newDiv.focus();
+    }
+});
+

@@ -1,6 +1,12 @@
 body {
 	font-family: var(--ff);
-	background: var(--c-body);
+	// background: var(--c-body);
+	background-color: rgb(25, 25, 25);
+	color: white;
+}
+
+input{
+	color: white;
 }
 
 html._overflow {

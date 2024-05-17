@@ -17,9 +17,27 @@
         border: none;
         background: none;
         font-size: 2.7em;
-        font-weight: 600;
+        font-weight: 700;
     }
 }
 
-.list-group {
+.list-group-item {
+    position: relative;
+    font-size: 15px;
+    letter-spacing: 0.055em;
+    line-height: 1.6;
+
+    background: none;
+    border: none;
+
+    color: rgb(155, 155, 155);
+
+    &::before{
+        content: "";
+        position: absolute;
+        border: 2px solid red;
+        display: block;
+        border-radius: 4px;
+    }
+
 }

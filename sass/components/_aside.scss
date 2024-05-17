@@ -15,10 +15,20 @@
     top: -5%;
     left: 0;
 
+    color: rgb(155, 155, 155);
+    font-weight: 500;
+
     &__container {
+        padding: 12px 18px 12px 8px;
         background-color: rgb(93 255 93 / 27%);;
         border-radius: 0 12px 12px 0;
         max-width: 100%;
+
+        background: rgb(32, 32, 32);
+        box-shadow: rgba(255, 255, 255, 0.05) -1px 0px 0px 0px inset;
+        width: 240px;
+
+        font-size: 14px;
     }
 
     &__profile {
@@ -111,7 +121,7 @@
             height: 4px;
             border-radius: 50%;
 
-            background: black;
+            background: rgb(155, 155, 155);
             top: 43%;
             left: -12%;
         }
