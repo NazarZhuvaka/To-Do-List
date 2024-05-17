@@ -49,7 +49,7 @@ html._overflow body {
 }
 
 .visibility {
-  transform: translate(0%, -30%) !important;
+  transform: translate(0%, 0%) !important;
   transition: 0.3s;
 }
 
@@ -243,7 +243,7 @@ p {
 
 .aside {
   position: absolute;
-  transform: translate(-120%, -30%);
+  transform: translate(-120%, 0%);
   transition: 0.3s;
   width: 200px;
   height: 100vh;
@@ -251,10 +251,80 @@ p {
   flex-direction: column;
   justify-content: center;
   gap: 50px;
-  top: 50%;
+  top: -5%;
   left: 0;
 }
 .aside__container {
-  background-color: red;
-  max-width: 100px;
+  background-color: rgba(93, 255, 93, 0.27);
+  border-radius: 0 12px 12px 0;
+  max-width: 100%;
+}
+.aside__profile {
+  display: flex;
+  gap: 8px;
+}
+.aside__profile-name {
+  display: flex;
+  align-items: center;
+}
+.aside__tools {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+.aside__tools-icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.aside__tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 24px;
+}
+.aside__tasks-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.aside__secondaty-tools {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 24px;
+}
+.aside__seck-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.create-new-page {
+  right: 8px;
+  position: absolute;
+}
+
+.item__ul {
+  margin-top: 8px;
+  margin-left: 43px;
+}
+.item__li {
+  position: relative;
+}
+.item__li::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: black;
+  top: 43%;
+  left: -12%;
+}
+
+.edit {
+  transform: rotate(269deg);
 }/*# sourceMappingURL=style.css.map */

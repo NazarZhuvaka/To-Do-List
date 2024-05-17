@@ -1,28 +1,80 @@
 .aside {
     position: absolute;
-    // background: blue;
 
-
-    transform: translate(-120%, -30%);
+    transform: translate(-120%, 0%);
 	transition: 0.3s;
 
     width: 200px;
     height: 100vh;
-
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 50px;
 
-    top: 50%;
+    top: -5%;
     left: 0;
 
     &__container {
-        background-color: red;
-        max-width: 100px;
+        background-color: rgb(93 255 93 / 27%);;
+        border-radius: 0 12px 12px 0;
+        max-width: 100%;
+    }
+
+    &__profile {
+        display: flex;
+        gap: 8px;
+    }
+
+    &__profile-img {
+    }
+
+    &__profile-name {
+        display: flex;
+        align-items: center;
+    }
+
+    &__tools {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 12px;
+    }
+
+    &__tools-icons {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__tasks{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 24px;
+    }
+
+    &__tasks-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__secondaty-tools {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 24px;
+    }
+
+    &__seck-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        
     }
 }
+
 .icons {
 
     &__title {
@@ -33,5 +85,44 @@
     &__text {
     }
 }
-.material-icons {
+
+.name-arrow-down {
 }
+.create-new-page {
+    right: 8px;
+    position: absolute;
+}
+
+
+.item {
+
+    &__ul {
+        margin-top: 8px;
+        margin-left: 43px;
+    }
+
+    &__li {
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            display: block;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+
+            background: black;
+            top: 43%;
+            left: -12%;
+        }
+    }
+}
+
+.edit{
+    transform: rotate(269deg);
+}
+
+
+
+
+
