@@ -1,5 +1,5 @@
 :root {
-  --ff: "Rubik", sans-serif;
+  --ff:sans-serif;
   --transition: .2s all ease-in-out;
   --c-primary: #ED9902;
   --c-white: #fff;
@@ -10,7 +10,6 @@
 }
 
 body {
-  font-family: var(--ff);
   background-color: rgb(25, 25, 25);
   color: white;
 }
@@ -222,10 +221,17 @@ p {
   align-items: center;
   gap: 8px;
 }
+.header__menu-text {
+  font-size: 14px;
+}
 .header__buttons {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
+  font-size: 14px;
+}
+.header__buttons-text {
+  opacity: 0.3;
 }
 .tasks {
   display: grid;
@@ -240,6 +246,7 @@ p {
   grid-column-start: 2;
   align-self: flex-end;
   margin-bottom: 20px;
+  font-family: monospace;
   border: none;
   background: none;
   font-size: 2.7em;
@@ -258,7 +265,7 @@ p {
   line-height: 130%;
   background: none;
   border: none;
-  color: rgb(155, 155, 155);
+  color: white;
 }
 .list-group-item::before {
   content: "";
@@ -274,8 +281,8 @@ p {
 }
 
 .checked {
-  color: #555;
   text-decoration: line-through;
+  color: rgb(155, 155, 155);
 }
 
 .aside {
