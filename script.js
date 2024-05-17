@@ -137,6 +137,31 @@ document.addEventListener('DOMContentLoaded', () => {
 const asideElement = document.querySelector('.aside').style.zIndex = '3'
 const headerElement = document.querySelector('.header__menu').style.zIndex = '5'
 
+const editBtn = document.querySelector('.header__buttons-text')
+
+
+editBtn.addEventListener('mouseover', function() {
+    const dropMenu = document.querySelector('.drop-menu')
+    dropMenu.style.transition = '0.3s'
+    dropMenu.style.opacity = '1'
+})
+editBtn.addEventListener('mouseout', function() {
+    const dropMenu = document.querySelector('.drop-menu')
+    dropMenu.style.opacity = '0'
+})
+
+const shareBtn = document.querySelector('.header__buttons-share')
+
+shareBtn.addEventListener('mouseover' , function() {
+    const dropMenu = document.querySelector('.drop-menu-share')
+    dropMenu.style.transition = '0.3s'
+    dropMenu.style.opacity = '1'
+})
+shareBtn.addEventListener('mouseout', function() {
+    const dropMenu = document.querySelector('.drop-menu-share')
+    dropMenu.style.opacity = '0'
+})
+
 
 
 

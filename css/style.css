@@ -63,6 +63,10 @@ html._overflow body {
   transition: 0.3s;
 }
 
+.material-icons {
+  font-size: 19px;
+}
+
 *,
 *::before,
 *::after {
@@ -235,10 +239,41 @@ p {
   align-items: center;
   gap: 8px;
   font-size: 14px;
+  position: relative;
 }
 .header__buttons-text {
   opacity: 0.3;
 }
+.drop-menu {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  background: rgba(255, 255, 255, 0.055);
+  padding: 5px 8px;
+  border-radius: 4px;
+  z-index: -111;
+  opacity: 0;
+}
+.drop-menu p {
+  opacity: 0.4;
+  font-size: 13px;
+}
+
+.drop-menu-share {
+  position: absolute;
+  bottom: -50px;
+  left: 40px;
+  background: rgba(255, 255, 255, 0.055);
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-size: 13px;
+  z-index: -111;
+  opacity: 0;
+}
+.drop-menu-share .keyboards {
+  opacity: 0.5;
+}
+
 .tasks {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -326,6 +361,7 @@ p {
 }
 .aside__profile {
   display: flex;
+  align-items: center;
   gap: 8px;
 }
 .aside__profile-name {

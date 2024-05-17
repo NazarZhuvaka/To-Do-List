@@ -26,6 +26,8 @@
         gap: 8px;
 
         font-size: 14px;
+
+        position: relative;
     }
 
     &__buttons-text {
@@ -36,8 +38,41 @@
     }
 }
 
+.drop-menu{
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    background: rgba(255, 255, 255, 0.055);
+    padding: 5px 8px;
+    border-radius: 4px;
 
+    z-index: -111;
+    opacity: 0;
 
-
-.material-icons {
+    p {
+        opacity: 0.4;
+        font-size: 13px;
 }
+
+}
+
+.drop-menu-share {
+    position: absolute;
+    bottom: -50px;
+    left: 40px;
+    background: rgba(255, 255, 255, 0.055);
+    padding: 5px 8px;
+    border-radius: 4px;
+    font-size: 13px;
+
+    z-index: -111;
+    opacity: 0;
+    .share {
+    }
+    .keyboards {
+        opacity: 0.5;
+    }
+}
+
+
+
