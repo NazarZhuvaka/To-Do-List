@@ -82,19 +82,77 @@ aside.addEventListener('mouseout', () => {
 
 
 
+// document.addEventListener('DOMContentLoaded', () => {
+//     const container = document.getElementById('container');
+//     const firstDiv = document.querySelector('.list-group-item');
+
+//     firstDiv.addEventListener('keydown', handleKeydown);
+
+//     function handleKeydown(event) {
+//         if (event.key === 'Enter') {
+//             event.preventDefault(); 
+//             createNewEditableDiv(this);
+//         } else if (event.key === 'Backspace' && this.textContent === '') {
+//             event.preventDefault(); 
+//             deleteCurrentDiv(this);
+//         }
+//     }
+
+//     function createNewEditableDiv(currentDiv) {
+//         const newDiv = document.createElement('div');
+//         newDiv.classList.add('list-group-item');
+//         newDiv.setAttribute('contenteditable', 'true');
+//         newDiv.addEventListener('keydown', handleKeydown);
+
+//         container.insertBefore(newDiv, currentDiv.nextSibling);
+//         newDiv.focus();
+//     }
+
+//     function deleteCurrentDiv(currentDiv) {
+//         const previousDiv = currentDiv.previousElementSibling;
+
+//         if (previousDiv) {
+//             currentDiv.remove();
+//             focusAtEnd(previousDiv);
+//         } else {
+//             currentDiv.textContent = ''; 
+//         }
+//     }
+
+//     function focusAtEnd(element) {
+//         const range = document.createRange();
+//         const selection = window.getSelection();
+//         range.selectNodeContents(element);
+//         range.collapse(false); 
+//         selection.removeAllRanges();
+//         selection.addRange(range);
+//         element.focus();
+//     }
+// });
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('container');
-    const firstDiv = document.querySelector('.list-group-item');
 
-    firstDiv.addEventListener('keydown', handleKeydown);
+    // Додаємо обробники подій до всіх існуючих елементів list-group-item
+    const listItems = document.querySelectorAll('.list-group-item');
+    listItems.forEach(item => {
+        item.addEventListener('keydown', handleKeydown);
+    });
 
     function handleKeydown(event) {
         if (event.key === 'Enter') {
-            event.preventDefault(); 
+            event.preventDefault();
             createNewEditableDiv(this);
         } else if (event.key === 'Backspace' && this.textContent === '') {
-            event.preventDefault(); 
+            event.preventDefault();
             deleteCurrentDiv(this);
+        } else if (event.key === 'ArrowUp') {
+            event.preventDefault();
+            moveToPreviousDiv(this);
+        } else if (event.key === 'ArrowDown') {
+            event.preventDefault();
+            moveToNextDiv(this);
         }
     }
 
@@ -115,7 +173,21 @@ document.addEventListener('DOMContentLoaded', () => {
             currentDiv.remove();
             focusAtEnd(previousDiv);
         } else {
-            currentDiv.textContent = ''; 
+            currentDiv.textContent = '';
+        }
+    }
+
+    function moveToPreviousDiv(currentDiv) {
+        const previousDiv = currentDiv.previousElementSibling;
+        if (previousDiv) {
+            focusAtEnd(previousDiv);
+        }
+    }
+
+    function moveToNextDiv(currentDiv) {
+        const nextDiv = currentDiv.nextElementSibling;
+        if (nextDiv) {
+            focusAtEnd(nextDiv);
         }
     }
 
@@ -123,12 +195,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const range = document.createRange();
         const selection = window.getSelection();
         range.selectNodeContents(element);
-        range.collapse(false); 
+        range.collapse(false);
         selection.removeAllRanges();
         selection.addRange(range);
         element.focus();
     }
 });
+
 
 
 
