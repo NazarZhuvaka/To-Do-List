@@ -48,7 +48,6 @@
   border: none;
   color: white;
 
-  // color: rgb(155, 155, 155);
 
   &::before {
     content: "";
@@ -64,7 +63,10 @@
   }
 
   &.checked::before {
-    background-color: rgb(2, 8, 197);
+    content: '';
+    position: absolute;
+    color: white;
+    background-color: white;
   }
 }
 

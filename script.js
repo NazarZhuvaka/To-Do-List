@@ -1,20 +1,3 @@
-const addtaskBtn = document.querySelector('.btn-secondary')
-const taskInput = document.querySelector('.task-input')
-
-const taskGroup = document.querySelector('.list-group')
-
-
-
-// taskGroup.addEventListener('click', function(e) {
-//     if (e.target.tagName === 'DIV') {
-//         console.log(e.target)
-//         e.target.classList.toggle('checked');
-//     } else if (e.target.tagName === 'asd') {
-//         e.target.parentElement.remove();
-//     }
-// }, false);
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const taskGroup = document.querySelector('.list-group');
 
@@ -84,7 +67,6 @@ for ( item of hoverItem) {
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('container');
 
-    // Додаємо обробники подій до всіх існуючих елементів list-group-item
     const listItems = document.querySelectorAll('.list-group-item');
     listItems.forEach(item => {
         item.addEventListener('keydown', handleKeydown);
@@ -151,6 +133,10 @@ document.addEventListener('DOMContentLoaded', () => {
         element.focus();
     }
 });
+
+const asideElement = document.querySelector('.aside').style.zIndex = '3'
+const headerElement = document.querySelector('.header__menu').style.zIndex = '5'
+
 
 
 
