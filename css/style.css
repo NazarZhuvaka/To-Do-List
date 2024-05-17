@@ -36,6 +36,12 @@ html._overflow body {
   margin-inline: auto;
 }
 
+.aside__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .btn {
   display: inline-block;
   cursor: pointer;
@@ -237,6 +243,11 @@ p {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: minmax(170px, max-content);
+  --content-width: minmax(auto, 708px);
+  --margin-width: minmax(96px, 1fr);
+  display: grid;
+  grid-template-columns: [full-start] var(--margin-left-width, var(--margin-width)) [content-start] var(--content-width) [content-end] var(--margin-right-width, var(--margin-width)) [full-end];
+  width: 100%;
 }
 .tasks__container {
   grid-row-start: 2;
@@ -273,11 +284,12 @@ p {
   border: 2px solid rgb(155, 155, 155);
   display: block;
   left: -8px;
+  cursor: pointer;
   width: 16px;
   height: 16px;
 }
 .list-group-item.checked::before {
-  background-color: green;
+  background-color: rgb(2, 8, 197);
 }
 
 .checked {
