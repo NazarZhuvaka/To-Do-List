@@ -178,39 +178,68 @@ iconChat.addEventListener('mouseout', function() {
     const dropMenu = document.querySelector('.drop-menu-chat')
     dropMenu.style.opacity = '0'
 })
-//
 
 
-const btnDropMenu = document.querySelectorAll('.hover-item')
 
-for (item of btnDropMenu) {
-    item.addEventListener('mouseover' , function(){
+// const btnDropMenu = document.querySelectorAll('.hover-item')
+
+// for (const item of btnDropMenu) {
+//     item.addEventListener('mouseover', function () {
+//         const dropMenu = document.createElement('div')
+//         dropMenu.classList.add('drop-menu-chat')
+//         this.appendChild(dropMenu)
+//         this.style.position = 'relative'
+
+//         const dataLeft = this.dataset.left
+//         const dataTop = this.dataset.top
+//         const dataMess = this.dataset.message
+
+//         dropMenu.style.left = `${dataLeft}`
+//         dropMenu.style.top = `${dataTop}`
+//         dropMenu.innerText = dataMess
+//         dropMenu.style.opacity = '1'
+
+//     })
+
+//     item.addEventListener('mouseout', function () {
+//         const dropMenu = this.querySelector('.drop-menu-chat')
+//         if (dropMenu) {
+//             dropMenu.remove() 
+//         }
+//     })
+// }
+
+const btnDropMenu = document.querySelectorAll('.drop-menu-hover')
+
+for (const item of btnDropMenu) {
+    item.addEventListener('mouseover', function () {
         const dropMenu = document.createElement('div')
         dropMenu.classList.add('drop-menu-chat')
-        dropMenu.style.position = 'absolute'
-        dropMenu.style.whiteSpace = 'nowrap' 
+
         this.appendChild(dropMenu)
+
         this.style.position = 'relative'
-        
-        const dataLeft = this.dataset.left;
-        const dataTop = this.dataset.top;
-        const dataMess = this.dataset.message;
-        
-        
-        dropMenu.style.left = `${dataLeft}`
-        dropMenu.style.top = `${dataTop}`
-        dropMenu.innerText = `${dataMess}`
-        // dropMenu.style.message = `${dataMess}`
+
+        const dataRight = this.dataset.right
+        const dataTop = this.dataset.top
+        const dataMess = this.dataset.message
+
+        dropMenu.style.right = `${dataRight}px`
+        dropMenu.style.top = `${dataTop}px`
+        dropMenu.innerText = dataMess
         dropMenu.style.opacity = '1'
-        
+
     })
-    item.addEventListener('mouseout' , function(){
+
+    item.addEventListener('mouseout', function () {
         const dropMenu = this.querySelector('.drop-menu-chat')
         if (dropMenu) {
-            dropMenu.remove()
+            dropMenu.remove() 
         }
     })
 }
+
+
 
 
 
