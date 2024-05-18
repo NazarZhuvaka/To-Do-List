@@ -162,6 +162,21 @@ shareBtn.addEventListener('mouseout', function() {
     dropMenu.style.opacity = '0'
 })
 
+const iconChat = document.querySelector('.chat-icon')
+
+iconChat.addEventListener('mouseover', function () {
+    const dropMenu = document.querySelector('.drop-menu-chat')
+    dropMenu.style.transition = '0.3s'
+    dropMenu.style.opacity = '0.8'
+
+})
+
+iconChat.addEventListener('mouseout', function() {
+    const dropMenu = document.querySelector('.drop-menu-chat')
+    dropMenu.style.opacity = '0'
+})
+
+
 
 
 
