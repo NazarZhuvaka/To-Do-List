@@ -170,7 +170,7 @@ const iconChat = document.querySelector('.chat-icon')
 iconChat.addEventListener('mouseover', function () {
     const dropMenu = document.querySelector('.drop-menu-chat')
     dropMenu.style.transition = '0.3s'
-    dropMenu.style.opacity = '0.8'
+    dropMenu.style.opacity = '0'
 
 })
 
@@ -178,7 +178,39 @@ iconChat.addEventListener('mouseout', function() {
     const dropMenu = document.querySelector('.drop-menu-chat')
     dropMenu.style.opacity = '0'
 })
+//
 
+
+const btnDropMenu = document.querySelectorAll('.hover-item')
+
+for (item of btnDropMenu) {
+    item.addEventListener('mouseover' , function(){
+        const dropMenu = document.createElement('div')
+        dropMenu.classList.add('drop-menu-chat')
+        dropMenu.style.position = 'absolute'
+        dropMenu.style.whiteSpace = 'nowrap' 
+        this.appendChild(dropMenu)
+        this.style.position = 'relative'
+        
+        const dataLeft = this.dataset.left;
+        const dataTop = this.dataset.top;
+        const dataMess = this.dataset.message;
+        
+        
+        dropMenu.style.left = `${dataLeft}`
+        dropMenu.style.top = `${dataTop}`
+        dropMenu.innerText = `${dataMess}`
+        // dropMenu.style.message = `${dataMess}`
+        dropMenu.style.opacity = '1'
+        
+    })
+    item.addEventListener('mouseout' , function(){
+        const dropMenu = this.querySelector('.drop-menu-chat')
+        if (dropMenu) {
+            dropMenu.remove()
+        }
+    })
+}
 
 
 
