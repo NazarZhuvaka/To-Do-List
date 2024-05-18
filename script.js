@@ -19,6 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
 const headerBtn = document.querySelector('.header__menu');
 const aside = document.querySelector('.aside');
 
+const headerMenuIcon = document.querySelector('.header__menu-icon')
+
 function showAside() {
     aside.classList.add('visibility');
 }
@@ -32,6 +34,7 @@ headerBtn.addEventListener('mouseover', showAside);
 headerBtn.addEventListener('mouseout', () => {
         if (!aside.matches(':hover') && !headerBtn.matches(':hover')) {
             hideAside();
+
         }
 });
 
@@ -175,6 +178,8 @@ iconChat.addEventListener('mouseout', function() {
     const dropMenu = document.querySelector('.drop-menu-chat')
     dropMenu.style.opacity = '0'
 })
+
+
 
 
 
