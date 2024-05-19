@@ -54,19 +54,19 @@
 
 
           <div class="aside__tools">
-            <div class="aside__item hover-item drop-menu-hover">
+            <div class="aside__item hover-item drop-menu-hover" data-right="-75" data-top="0" data-message="Mehave" >
               <span class="material-icons">
                 search
               </span>
               Search
             </div>
-            <div class="aside__item hover-item drop-menu-hover">
+            <div class="aside__item hover-item drop-menu-hover" data-right="-75" data-top="0" data-message="Mehave" >
               <span class="material-icons">
                 inbox
               </span>
               Inbox
             </div>
-            <div class="aside__item hover-item drop-menu-hover">
+            <div class="aside__item hover-item drop-menu-hover" data-right="-75" data-top="0" data-message="Mehave" >
               <span class="material-icons">
                 settings
               </span>
@@ -127,21 +127,21 @@
           </div>
 
           <div class="aside__secondaty-tools">
-            <div class="aside__item hover-item drop-menu-hover">
+            <div class="aside__item hover-item drop-menu-hover" data-right="-75" data-top="0" data-message="Folder">
               <span class="material-icons">
                 calendar_month
                 
               </span>
                 Calendar
             </div>
-            <div class="aside__item hover-item drop-menu-hover">
+            <div class="aside__item hover-item drop-menu-hover" data-right="-75" data-top="0" data-message="Fplder">
               <span class="material-icons">
                 folder
                 
               </span>
                 Templates
             </div>
-            <div class="aside__item hover-item drop-menu-hover" >
+            <div class="aside__item hover-item drop-menu-hover" data-right="-75" data-top="0" data-message="Delete" >
               <span class="material-icons">
                 delete
                 
@@ -173,7 +173,6 @@
             <p class="header__menu-text hover-item">To do tasks</p>
           </div>
           <div class="header__buttons">
-              <!-- Дата вxоду -->
               <p class="header__buttons-text">
                 Edited Mar 13
               </p>
@@ -183,35 +182,36 @@
                 <p>Created by User May 17</p>
               </div>
     
-              <!-- hover drop-downmenu , де вказати дату вxоду і дату реєстрації -->
-              <!--  -->
-    
-              <!-- hover efect drop-menu -->
+              
               <p class="header__buttons-share hover-item"  >Share</p>
 
               <div class="drop-menu-share">
-                <!-- <p class="share">Share or publish to the web</p>
-                <p class="keyboards">Ctr+Shift+O</p> -->
+                <p class="share">Share or publish to the web</p>
+                <p class="keyboards">Ctr+Shift+O</p>
               </div>
-    
-              <span class="material-icons hover-item chat-icon" >
+              
+              
+              <div class="drop-menu-chat header__drop-menu" data-right="25" data-top="28" >View all comments</div>
+              <span class="material-icons hover-item schedule-icon" data-menu="chat" >
                 chat
               </span>
+          
 
-              <div class="drop-menu-chat" >
-                View all comments
-              </div>
-    
-              <span class="material-icons hover-item"  >
+              <span class="material-icons hover-item schedule-icon" data-menu="schedule">
                 schedule
               </span>
-              <span class="material-icons hover-item">
+              <div class="drop-menu-schedule header__drop-menu" data-right="25" data-top="28">View all updates</div>
+              
+              <span class="material-icons hover-item schedule-icon" data-menu="star">
                 star
               </span>
-    
-              <span class="material-icons hover-item">
+              <div class="drop-menu-star header__drop-menu" data-right="15" data-top="28">Add to your favorites</div>
+              
+              <span class="material-icons hover-item schedule-icon" data-menu="more">
                 more_horiz
               </span>
+              <div class="drop-menu-more header__drop-menu" data-right="-5" data-top="28">Style, export, and more...</div>
+              
               
           </div>
         </header>
@@ -221,7 +221,6 @@
           <input class="tasks__title" value="To do tasks" type="text" placeholder="Untitled">  
           <div class="tasks__container">
 
-            <!-- <h1 class="tasks__title">To do tasks</h1> -->
 
             
             <ul class="list-group" id="container">
@@ -232,32 +231,15 @@
               
             </ul>
             
-            <!-- <input
-            type="text"
-            id="inputPassword5"
-            class="form-control task-input"
-            aria-describedby="passwordHelpBlock"
-            placeholder="Enter your new task"
-          />
-          <button type="button" class="btn btn-secondary">Add Task</button> -->
+
 
           </div>
         </section>
   
           
-          
-
-
 
       </div>
     </div>
-
-    
-
-
-
-
-      
 
 
     <script src="./script.js"></script>

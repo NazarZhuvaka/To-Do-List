@@ -165,49 +165,48 @@ shareBtn.addEventListener('mouseout', function() {
     dropMenu.style.opacity = '0'
 })
 
-const iconChat = document.querySelector('.chat-icon')
-
-iconChat.addEventListener('mouseover', function () {
-    const dropMenu = document.querySelector('.drop-menu-chat')
-    dropMenu.style.transition = '0.3s'
-    dropMenu.style.opacity = '0'
-
-})
-
-iconChat.addEventListener('mouseout', function() {
-    const dropMenu = document.querySelector('.drop-menu-chat')
-    dropMenu.style.opacity = '0'
-})
 
 
 
-// const btnDropMenu = document.querySelectorAll('.hover-item')
+const schIcon = document.querySelectorAll('.schedule-icon');
+const menuOpacity = document.querySelectorAll('.header__drop-menu');
 
-// for (const item of btnDropMenu) {
-//     item.addEventListener('mouseover', function () {
-//         const dropMenu = document.createElement('div')
-//         dropMenu.classList.add('drop-menu-chat')
-//         this.appendChild(dropMenu)
-//         this.style.position = 'relative'
+for (const item of menuOpacity) {
+    item.style.display = 'none';
+}
 
-//         const dataLeft = this.dataset.left
-//         const dataTop = this.dataset.top
-//         const dataMess = this.dataset.message
+schIcon.forEach(icon => {
+    icon.addEventListener('mouseover', function() {
+        const menuType = icon.dataset.menu;
+        const menu = document.querySelector(`.drop-menu-${menuType}`);
+        
+        if (menu) {
+            const dataRight = menu.dataset.right;
+            const dataTop = menu.dataset.top;
+        
+            menu.style.right = `${dataRight}px`;
+            menu.style.top = `${dataTop}px`;
+            
+            menu.style.position = 'absolute';
+            menu.style.display = 'block';
+        }
+    });
+    
+    icon.addEventListener('mouseout', function() {
+        const menuType = icon.dataset.menu;
+        const menu = document.querySelector(`.drop-menu-${menuType}`);
+        
+        if (menu) {
+            // menu.style.opacity = '0';
+            menu.style.display = 'none';
 
-//         dropMenu.style.left = `${dataLeft}`
-//         dropMenu.style.top = `${dataTop}`
-//         dropMenu.innerText = dataMess
-//         dropMenu.style.opacity = '1'
+        }
+    });
+});
 
-//     })
 
-//     item.addEventListener('mouseout', function () {
-//         const dropMenu = this.querySelector('.drop-menu-chat')
-//         if (dropMenu) {
-//             dropMenu.remove() 
-//         }
-//     })
-// }
+
+
 
 const btnDropMenu = document.querySelectorAll('.drop-menu-hover')
 
