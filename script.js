@@ -261,15 +261,15 @@ headerArrow.addEventListener('click' , function(){
 
     headerMenuIcon.classList.add("hide")
     profArr.style.display = 'block'
-    const asideCon = document.querySelector('.aside__container').style.height = '100%'
-    const wrapper = document.querySelector('.wrapper').style.display = "flex"
+    document.querySelector('.aside__container').style.height = '100%'
+    document.querySelector('.wrapper').style.display = "flex"
     
 })
 
 function closeMenu () {
     asideSection.style.transform = "translate(-120%,2%)"
     asideSection.style.position = "absolute"
-    const asideCon = document.querySelector('.aside__container').style.height = ''
+    document.querySelector('.aside__container').style.height = ''
     headerMenuIcon.classList.remove("hide")
 
     profArr.style.display = 'none'
