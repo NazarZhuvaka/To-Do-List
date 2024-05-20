@@ -249,34 +249,34 @@ for (const item of btnDropMenu) {
         }
     })
 }
-
-// const headerIcon = document.querySelector('.header__menu-icon')
-
-// headerIcon.addEventListener('mouseover' , function () {
-//     this.style.display = 'none'
-
-// })
-// headerIcon.addEventListener('mouseout' , function () {
-    //     this.style.display = 'block'
-    //     const headerArrow = document.querySelector('.header-arrow').style.display = 'none'
-    
-    // })
     
 const headerArrow = document.querySelector('.header-arrow')
+const profArr = document.querySelector('.profille-arrow')
+const asideSection = document.querySelector('.aside')
 
 headerArrow.addEventListener('click' , function(){
-    const asideSection = document.querySelector('.aside')
     asideSection.style.transform = "translate(0,0)"
     asideSection.style.position = "unset"
     asideSection.style.height = "100vh"
-    const asideCon = document.querySelector('.aside__container').style.height = '100%'
-    
-    const wrapper = document.querySelector('.wrapper').style.display = "flex"
-    // const body = document.querySelector('body').style.display = 'flex'
 
+    headerMenuIcon.classList.add("hide")
+    profArr.style.display = 'block'
+    const asideCon = document.querySelector('.aside__container').style.height = '100%'
+    const wrapper = document.querySelector('.wrapper').style.display = "flex"
     
 })
 
+function closeMenu () {
+    asideSection.style.transform = "translate(-120%,2%)"
+    asideSection.style.position = "absolute"
+    const asideCon = document.querySelector('.aside__container').style.height = ''
+    headerMenuIcon.classList.remove("hide")
+
+    profArr.style.display = 'none'
+
+
+    return
+}
 
 
 

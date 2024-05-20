@@ -33,9 +33,12 @@
     }
 
     &__profile {
-        display: flex;
+        // display: flex;
         align-items: center;
         gap: 8px;
+
+        display: grid;
+        grid-template-columns: 1fr 3.5fr 1fr;
     }
 
     &__profile-img {
