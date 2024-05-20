@@ -226,6 +226,9 @@ p {
   align-items: center;
   padding: 12px 0;
 }
+.header-arrow {
+  display: none;
+}
 .header__menu {
   display: flex;
   align-items: center;
@@ -244,6 +247,7 @@ p {
 .header__buttons-text {
   opacity: 0.3;
 }
+
 .drop-menu {
   position: absolute;
   bottom: -50px;
@@ -272,26 +276,6 @@ p {
 }
 .drop-menu-share .keyboards {
   opacity: 0.5;
-}
-
-.drop-menu-chat {
-  position: absolute;
-  background: rgba(255, 255, 255, 0.055);
-  padding: 5px 8px;
-  border-radius: 4px;
-  font-size: 13px;
-  z-index: 10000;
-}
-
-.drop-menu-comments {
-  position: absolute;
-  bottom: -32px;
-  left: 100px;
-  background: rgba(255, 255, 255, 0.055);
-  padding: 5px 8px;
-  border-radius: 4px;
-  font-size: 13px;
-  opacity: 0;
 }
 
 .header__drop-menu {

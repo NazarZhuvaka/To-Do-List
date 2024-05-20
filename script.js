@@ -46,6 +46,18 @@ aside.addEventListener('mouseout', () => {
         }
 });
 
+headerBtn.addEventListener('mouseover' , function () {
+    const headerIcon = document.querySelector('.header__menu-icon').style.display = 'none'
+    const headerArrow = document.querySelector('.header-arrow').style.display = 'block'
+    
+    
+})
+headerBtn.addEventListener('mouseout' , function () {
+    const headerIcon = document.querySelector('.header__menu-icon').style.display = 'block'
+    const headerArrow = document.querySelector('.header-arrow').style.display = 'none'
+    
+})
+
 
 const hoverItem = document.querySelectorAll('.hover-item')
 
@@ -237,6 +249,34 @@ for (const item of btnDropMenu) {
         }
     })
 }
+
+// const headerIcon = document.querySelector('.header__menu-icon')
+
+// headerIcon.addEventListener('mouseover' , function () {
+//     this.style.display = 'none'
+
+// })
+// headerIcon.addEventListener('mouseout' , function () {
+    //     this.style.display = 'block'
+    //     const headerArrow = document.querySelector('.header-arrow').style.display = 'none'
+    
+    // })
+    
+const headerArrow = document.querySelector('.header-arrow')
+
+headerArrow.addEventListener('click' , function(){
+    const asideSection = document.querySelector('.aside')
+    asideSection.style.transform = "translate(0,0)"
+    asideSection.style.position = "unset"
+    asideSection.style.height = "100vh"
+    const asideCon = document.querySelector('.aside__container').style.height = '100%'
+    
+    const wrapper = document.querySelector('.wrapper').style.display = "flex"
+    // const body = document.querySelector('body').style.display = 'flex'
+
+    
+})
+
 
 
 
