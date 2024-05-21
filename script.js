@@ -46,17 +46,36 @@ aside.addEventListener('mouseout', () => {
         }
 });
 
-headerBtn.addEventListener('mouseover' , function () {
-    const headerIcon = document.querySelector('.header__menu-icon').style.display = 'none'
-    const headerArrow = document.querySelector('.header-arrow').style.display = 'block'
+// let isMenuClosing = false;
+
+// headerBtn.addEventListener('mouseover' , function () {
+//     if (isMenuClosing) return;
+//     document.querySelector('.header__menu-icon').style.display = 'none'
+//     document.querySelector('.header-arrow').style.display = 'block'
     
     
-})
-headerBtn.addEventListener('mouseout' , function () {
-    const headerIcon = document.querySelector('.header__menu-icon').style.display = 'block'
-    const headerArrow = document.querySelector('.header-arrow').style.display = 'none'
+// })
+// headerBtn.addEventListener('mouseout' , function () {
+//     if (isMenuClosing) return;
+//     document.querySelector('.header__menu-icon').style.display = 'block'
+//     document.querySelector('.header-arrow').style.display = 'none'
     
-})
+// })
+
+
+headerBtn.addEventListener('mouseover', function () {
+    if (asideSection.classList.contains('open')) return; // Якщо меню відкрите, не виконуємо решту коду
+
+    document.querySelector('.header__menu-icon').style.display = 'none';
+    document.querySelector('.header-arrow').style.display = 'block';
+});
+
+headerBtn.addEventListener('mouseout', function () {
+    if (asideSection.classList.contains('open')) return; // Якщо меню відкрите, не виконуємо решту коду
+    document.querySelector('.header__menu-icon').style.display = 'block';
+    document.querySelector('.header-arrow').style.display = 'none';
+});
+
 
 
 const hoverItem = document.querySelectorAll('.hover-item')
@@ -250,33 +269,69 @@ for (const item of btnDropMenu) {
     })
 }
     
-const headerArrow = document.querySelector('.header-arrow')
-const profArr = document.querySelector('.profille-arrow')
-const asideSection = document.querySelector('.aside')
+// const headerArrow = document.querySelector('.header-arrow')
+// const profArr = document.querySelector('.profille-arrow')
+// const asideSection = document.querySelector('.aside')
 
-headerArrow.addEventListener('click' , function(){
-    asideSection.style.transform = "translate(0,0)"
-    asideSection.style.position = "unset"
-    asideSection.style.height = "100vh"
+// headerArrow.addEventListener('click' , function(){
+//     asideSection.style.transform = "translate(0,0)"
+//     asideSection.style.position = "unset"
+//     asideSection.style.height = "100vh"
 
-    headerMenuIcon.classList.add("hide")
-    profArr.style.display = 'block'
-    document.querySelector('.aside__container').style.height = '100%'
-    document.querySelector('.wrapper').style.display = "flex"
+//     headerMenuIcon.classList.add("hide")
+//     profArr.style.display = 'block'
+//     document.querySelector('.aside__container').style.height = '100%'
+//     document.querySelector('.wrapper').style.display = "flex"
     
-})
+// })
 
-function closeMenu () {
-    asideSection.style.transform = "translate(-120%,2%)"
-    asideSection.style.position = "absolute"
-    document.querySelector('.aside__container').style.height = ''
-    headerMenuIcon.classList.remove("hide")
+// function closeMenu () {
+//     asideSection.style.transform = "translate(-120%,0%)"
+//     asideSection.style.position = "absolute"
+//     document.querySelector('.aside__container').style.height = ''
+//     headerMenuIcon.classList.remove("hide")
 
-    profArr.style.display = 'none'
+//     profArr.style.display = 'none'
 
 
-    return
+//     return
+// }
+
+const headerArrow = document.querySelector('.header-arrow');
+const profArr = document.querySelector('.profille-arrow');
+const asideSection = document.querySelector('.aside');
+
+headerArrow.addEventListener('click', function() {
+    asideSection.style.transform = "translate(0,0)";
+    asideSection.style.position = "unset";
+    asideSection.style.height = "100vh";
+
+    headerMenuIcon.classList.add("hide");
+    document.querySelector('.header-arrow').style.display = 'none';
+
+    profArr.style.display = 'block';
+    document.querySelector('.aside__container').style.height = '100%';
+    document.querySelector('.wrapper').style.display = "flex";
+
+    // Додаємо клас для відкритого стану
+    asideSection.classList.add('open');
+});
+
+function closeMenu() {
+    asideSection.style.transform = "translate(-120%,0%)";
+    asideSection.style.position = "absolute";
+    document.querySelector('.aside__container').style.height = '';
+    headerMenuIcon.classList.remove("hide");
+    profArr.style.display = 'none';
+
+    document.querySelector('.header__menu-icon').style.display = 'block';
+    document.querySelector('.header-arrow').style.display = 'none';
+
+
+    // Видаляємо клас для відкритого стану
+    asideSection.classList.remove('open');
 }
+
 
 
 

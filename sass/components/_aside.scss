@@ -1,7 +1,7 @@
 .aside {
     position: absolute;
 
-    transform: translate(-120%, 2%);
+    transform: translate(-120%, 0%);
 	transition: 0.3s;
 
     width: 200px;
@@ -12,7 +12,7 @@
     justify-content: center;
     gap: 50px;
 
-    top: -5%;
+    // top: -5%;
     left: 0;
 
     color: rgb(155, 155, 155);
@@ -92,6 +92,7 @@
 }
 
 .name-arrow-down {
+    align-self: end;
 }
 .create-new-page {
     right: 8px;
