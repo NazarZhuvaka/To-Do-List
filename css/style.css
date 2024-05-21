@@ -272,9 +272,14 @@ p {
   grid-column-start: 2;
 }
 .tasks__title {
+  position: relative !important;
   grid-column-start: 2;
   align-self: flex-end;
   margin-bottom: 20px;
+  font-family: monospace;
+}
+.tasks__text {
+  align-self: flex-end;
   font-family: monospace;
   border: none;
   background: none;
@@ -456,4 +461,22 @@ p {
   opacity: 0;
   transition: opacity 0.3s;
   pointer-events: none;
+}
+
+.tasks__title-emodges {
+  position: absolute;
+  font-family: monospace, sans-serif;
+  font-size: 15px;
+  opacity: 0;
+  top: -20px;
+  left: 6px;
+  display: flex;
+  gap: 15px;
+  transition: 0.3s;
+}
+
+.add-emodge {
+  display: flex;
+  align-items: center;
+  gap: 7px;
 }/*# sourceMappingURL=style.css.map */
