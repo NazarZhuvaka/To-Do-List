@@ -1,0 +1,58 @@
+.drop-menu-share {
+    position: absolute;
+    bottom: -50px;
+    left: 40px;
+    background: rgba(255, 255, 255, 0.055);
+    padding: 5px 8px;
+    border-radius: 4px;
+    font-size: 13px;
+
+    z-index: -111;
+    opacity: 0;
+    
+    .keyboards {
+        opacity: 0.5;
+    }
+}
+
+.drop-menu{
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    background: rgba(255, 255, 255, 0.055);
+    padding: 5px 8px;
+    border-radius: 4px;
+
+    z-index: -111;
+    opacity: 0;
+
+    p {
+        opacity: 0.4;
+        font-size: 13px;
+}
+
+}
+
+
+.header__drop-menu{
+    position: absolute;
+    background: rgba(255, 255, 255, 0.055);
+    padding: 5px 8px;
+    border-radius: 4px;
+    font-size: 13px;
+    display: none;
+
+}
+
+.drop-menu-chat {
+	position: absolute;
+	background-color: rgba(255, 255, 255, 0.055);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 13px;
+	padding: 3px  6px ;
+    border-radius: 4px;
+
+	opacity: 0;
+	transition: opacity 0.3s;
+	pointer-events: none;
+}
