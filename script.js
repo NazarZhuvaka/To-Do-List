@@ -289,14 +289,30 @@ function closeMenu() {
 
 const mainTitle = document.querySelector('.tasks__title')
 
-// const emojes = document.querySelectorAll('selector') 
-
 mainTitle.addEventListener('mouseover', function () {
-    document.querySelector('.tasks__title-emodges').style.opacity = '0.3'
+    document.querySelector('.tasks__title-emodges').style.opacity = '0.5'
 })
 mainTitle.addEventListener('mouseout', function () {
     document.querySelector('.tasks__title-emodges').style.opacity = '0'
 })
+
+const addEmodge = document.querySelectorAll('.add-emodge')
+
+for (item of addEmodge) {
+    item.style.padding = '2px 6px'
+    item.addEventListener('mouseover', function () {
+        this.style.background = 'rgba(255, 255, 255, 0.13)'
+        this.style.borderRadius = '4px'
+        this.style.transition = '0.3s'
+        this.style.cursor = 'pointer'           
+    })
+    item.addEventListener('mouseout', function () {
+        this.style.background = ''
+        this.style.borderRadius = '4px'
+        this.style.transition = '0.3s'
+        this.style.cursor = 'pointer'           
+    })
+}
 
 
 
