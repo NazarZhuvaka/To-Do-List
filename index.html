@@ -59,8 +59,8 @@
 
 
           <div class="aside__tools">
-            <div class="aside__item hover-item drop-menu-hover" data-right="-225" data-top="0" data-message="Search and quickly jump to a page" >
-              <span class="material-icons">
+            <div onclick="openMenu()" class="aside__item hover-item drop-menu-hover search__aside" data-right="-225" data-top="0" data-message="Search and quickly jump to a page" >
+              <span  class="material-icons ">
                 search
               </span>
               Search
@@ -228,8 +228,16 @@
           <div class="search-bg">
 
             <div class="search-container">
-  
-              <p> Search section</p>
+              <div class="search-form">
+                <span  class="material-icons search__icon">
+                  search
+                  </span>
+                <input class="search__input" type="text" placeholder="Search or ask question in User`s Notion...">
+                <span class="material-icons search__filter">
+                  filter_list
+                  </span>
+              </div>
+              <!-- <p> Search section</p> -->
             </div>
           </div>
         </section>

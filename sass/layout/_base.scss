@@ -70,6 +70,9 @@ html._overflow {
 	transition: 0.3s;
 
 }
+.show{
+	display: flex !important;
+}
 
 .hide{
 	display: none !important;
@@ -112,3 +115,23 @@ html._overflow {
 // 		font-size: 14px;
 // 	}
 // }
+
+.search {
+    display: none; /* Початковий стан прихований */
+}
+
+.search.show {
+    display: flex; /* Показує елемент */
+}
+
+.search.hide {
+    display: none; /* Приховує елемент */
+}
+
+.search {
+    display: none; /* Початковий стан прихований */
+}
+
+.search.show {
+    display: flex; /* Показує елемент */
+}

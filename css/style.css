@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --ff:sans-serif;
   --transition: .2s all ease-in-out;
@@ -63,6 +64,10 @@ html._overflow body {
   transition: 0.3s;
 }
 
+.show {
+  display: flex !important;
+}
+
 .hide {
   display: none !important;
 }
@@ -73,6 +78,26 @@ html._overflow body {
 
 .material-icons {
   font-size: 19px;
+}
+
+.search {
+  display: none; /* Початковий стан прихований */
+}
+
+.search.show {
+  display: flex; /* Показує елемент */
+}
+
+.search.hide {
+  display: none; /* Приховує елемент */
+}
+
+.search {
+  display: none; /* Початковий стан прихований */
+}
+
+.search.show {
+  display: flex; /* Показує елемент */
 }
 
 *,
@@ -490,12 +515,46 @@ p {
   position: fixed;
   top: 0px;
   left: 0px;
-  display: flex;
   align-items: flex-start;
   justify-content: center;
   pointer-events: auto;
+  display: none;
+}
+.search-form {
+  display: flex;
+  align-items: center;
+  border: none;
+  padding: 0px 16px 0px 12px;
+  width: 100%;
+  background: transparent;
+  font-size: 18px;
+  line-height: inherit;
+  height: 48px;
+  box-shadow: rgba(255, 255, 255, 0.094) 0px 1px 0px;
+}
+.search__input {
+  font-size: inherit;
+  line-height: inherit;
+  border: none;
+  background: none;
+  width: 100%;
+  display: block;
+  resize: none;
+  padding: 0px;
+  min-width: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.search__icon {
+  margin-right: 10px;
+}
+.search__filter {
+  margin-left: 12px;
 }
 .search-bg {
+  display: flex;
+  justify-content: center;
   position: absolute;
   inset: 0px;
   background: rgba(15, 15, 15, 0.8);

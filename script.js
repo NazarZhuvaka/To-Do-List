@@ -314,6 +314,34 @@ for (item of addEmodge) {
     })
 }
 
+const asideSearch = document.querySelector('.search__aside')
+const searchBlock = document.querySelector('.search')
+
+
+function closeBlock(e) {
+    if (searchBlock.contains(e.target)){
+        searchBlock.classList.add('hide')
+        console.log(e.target)
+        console.log('Closing menu');
+    }
+}
+
+document.addEventListener('click' , closeBlock)
+
+function openMenu () {
+    if (searchBlock.classList.contains("hide")){
+        searchBlock.classList.remove("hide")
+    }
+    searchBlock.classList.add('show')
+}
+
+
+
+
+
+
+
+
 
 
 
