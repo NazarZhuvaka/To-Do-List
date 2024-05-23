@@ -319,10 +319,8 @@ const searchBlock = document.querySelector('.search')
 
 
 function closeBlock(e) {
-    if (searchBlock.contains(e.target)){
+    if (e.target.classList.contains("search-bg")) {
         searchBlock.classList.add('hide')
-        console.log(e.target)
-        console.log('Closing menu');
     }
 }
 
@@ -334,18 +332,5 @@ function openMenu () {
     }
     searchBlock.classList.add('show')
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
