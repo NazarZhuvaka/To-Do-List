@@ -60,6 +60,10 @@
   }
 
   &-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     position: relative;
     z-index: 1;
     box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px,
@@ -81,6 +85,7 @@
   &__tool {
     // margin-bottom: 18px;
     padding-top: 8px;
+    padding-right: 5px;
 
     &-icon{
       display: flex;
@@ -131,6 +136,13 @@
     font-size: 14px;
     padding-top: 8px;
     padding-bottom: 8px;
+
+    &-element{
+      // display: none;
+      opacity: 0;
+      position: absolute;
+      right: 15px;
+    }
 
     
   }
